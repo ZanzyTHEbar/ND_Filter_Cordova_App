@@ -1,0 +1,33 @@
+{
+  "name": "io.prometheontechnologies.filterselectiontool",
+  "displayName": "Filter Selection Tool",
+  "version": "1.0.0",
+  "description": "Filter Selection Tool for choosing the right optical filter based on ambient light level",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Prometheon Technologies",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
+    "cordova-electron": "^3.1.0",
+    "cordova-plugin-lightsensor": "github:DeshanKTD/cordova-plugin-lightsensor",
+    "cordova-windows": "^7.0.1"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "windows",
+      "electron",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-lightsensor": {}
+    }
+  }
+}

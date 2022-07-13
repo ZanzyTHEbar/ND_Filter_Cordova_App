@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.prometheontechnologies.filterselectiontool" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Filter Selection Tool</name>
+    <description>Filter Selection Tool for choosing the right optical filter based on ambient light level</description>
+    <author email="zacariah@prometheontechnologies.com" href="https://prometheontechnologies.com">
+        Prometheon Technologies
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

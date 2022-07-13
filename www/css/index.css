@@ -1,0 +1,301 @@
+/* Custom */
+/*
+* Elements
+*/
+html {
+  font-family: "Roboto", monospace, monospace;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  -moz-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  -ms-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  /* Padding to avoid the "unsafe" areas behind notches in the screen */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  font-family: "Roboto", monospace, monospace;
+  background-color: #1690cd;
+}
+
+h1,
+h2 {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1.3;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+    0 4px 0 #efefef, 0 12px 5px rgba(0, 0, 0, 0.1);
+  animation: rotate ease-in-out 1s infinite alternate;
+}
+
+p {
+  font-size: 20px;
+  text-shadow: 0 1px 0 #efefef;
+  animation: 5s ease 0s normal forwards 1 fadeIn;
+}
+
+li {
+  color: #efefef;
+  line-height: 1.3;
+  text-shadow: 0 1px 0 #efefef;
+  letter-spacing: 5px;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100%;
+}
+
+br {
+  width: 100%;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+/* .centeredDiv {
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+} */
+
+/*
+* Classes
+*/
+.container {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #00f260, #0575e6, #30309a);
+  background-size: 600% 400%;
+  animation: gradientBackground 10s ease infinite;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.form-pane {
+  transition: 0.3s;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #696 #363 #363 #696;
+  background-color: #09269c;
+  transition: transform 0.2s; /* Animation */
+  list-style-type: none;
+}
+
+.form-pane:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transform: scale(
+    1.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.form-container {
+  padding: 16px 16px 16px;
+  list-style-type: none;
+  border-radius: 8px;
+}
+
+.form-item label {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  padding-right: 25px;
+  padding-left: 9px;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5em;
+}
+
+.event {
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0px 30px;
+  padding: 2px 0px;
+}
+
+.event.listening {
+  background-color: #333333;
+  display: block;
+}
+
+.event.received {
+  background-color: #4b946a;
+  display: none;
+}
+
+.blink {
+  animation: fade 3000ms infinite;
+  -webkit-animation: fade 3000ms infinite;
+}
+
+/*
+* ID's
+*/
+#rec_text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 #efefef;
+  animation: 5s ease 0s normal forwards 1 fadeIn;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+
+#lux_text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 #efefef;
+  animation: 5s ease 0s normal forwards 1 fadeIn;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+
+#deviceready.ready .event.listening {
+  display: none;
+}
+#deviceready.ready .event.received {
+  display: block;
+}
+
+/*
+* Media Queries
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+}
+
+@media screen and (min-width: 600px) {
+  .hereIsMyClass {
+    width: 30%;
+    float: right;
+  }
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+  .app {
+    background-position: left center;
+    padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
+    margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
+    /* offset horizontal: half of image width and text area width */
+  }
+}
+
+/*
+* Keyframes
+*/
+
+@keyframes rotate {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+* Scrollbar
+*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d7faeb4;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d7fae;
+}
